@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT=${HOME}/project/chroot-raspbian-armhf
+source rpi-config
 
 mount -t proc proc "${ROOT}/proc"
 mount -t sysfs sysfs "${ROOT}/sys"
