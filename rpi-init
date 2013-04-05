@@ -7,3 +7,7 @@ echo "deb ${MIRROR} wheezy main" > /etc/apt/sources.list
 wget http://archive.raspbian.org/raspbian.public.key -O - | apt-key add -
 
 apt-get update
+
+echo "127.0.0.1 ${HOSTNAME}" >> /etc/hosts
+
+echo ${HOSTNAME} > /etc/hostname

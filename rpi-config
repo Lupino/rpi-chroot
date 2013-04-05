@@ -5,3 +5,5 @@ export SCRIPTROOT=`dirname $0`
 export RPI_INIT=${SCRIPTROOT}/rpi-init
 export PASSWD=raspberry
 export USER=rpi
+
+export HOSTNAME=RaspberryPi
