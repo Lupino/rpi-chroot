@@ -1,0 +1,16 @@
+#!/bin/bash
+
+ROOT=${HOME}/project/chroot-raspbian-armhf
+
+mount -t proc proc "${ROOT}/proc"
+mount -t sysfs sysfs "${ROOT}/sys"
+
+mount -o bind /dev "${ROOT}/dev"
+mount -t devpts devpts "${ROOT}/dev/pts"
+
+chroot ${ROOT} /bin/bash
+
+umount "${ROOT}/dev/pts"
+umount "${ROOT}/dev"
+umount "${ROOT}/sys"
+umount "${ROOT}/proc"
