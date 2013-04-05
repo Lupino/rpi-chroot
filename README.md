@@ -28,11 +28,14 @@
 * `rpi-build-rootfs` build the base chroot env.
 * `rpi-init` the init script, run on the rpi-build-rootfs
 * `rpi-chroot` the chroot script you run it to enter the chroot. you also `rpi-chroot [command]`
+* `rpi-install-kernel` install the kernel for the chroot. make sure it can run on the raspberry pi board.
 
 # Denpend
 
     sudo apt-get install qemu-user-static debootstrap
 
-#TODO
+# Install to a SD disk
 
-* Build a runenable system on a SD disk
+    ./rpi-install-kernel
+    # split the SD disk two partent 50M fat and ext4 left
+    # copy boot to the first partent and other to the next.
