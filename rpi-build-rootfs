@@ -4,4 +4,8 @@ source rpi-config
 
 qemu-debootstrap --arch armhf wheezy ${ROOT} $MIRROR
 
-${SCRIPTROOT}/rpi-chroot ${RPI_INIT}
+cp ${RPI_INIT} ${ROOT}
+
+${SCRIPTROOT}/rpi-chroot /rpi-init
+
+rm ${ROOT}/rpi-init
