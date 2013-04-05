@@ -2,13 +2,19 @@
 
 source rpi-config
 
+SCRIPTS=/bin/bash
+
+if test -z $1; then
+    SCRIPTS=$1
+fi
+
 mount -t proc proc "${ROOT}/proc"
 mount -t sysfs sysfs "${ROOT}/sys"
 
 mount -o bind /dev "${ROOT}/dev"
 mount -t devpts devpts "${ROOT}/dev/pts"
 
-chroot ${ROOT} /bin/bash
+chroot ${ROOT} ${SCRIPTS}
 
 umount "${ROOT}/dev/pts"
 umount "${ROOT}/dev"
