@@ -1,1 +1,2 @@
 export ROOT=${HOME}/project/chroot-raspbian-armhf
+export MIRROR=http://mirror.nus.edu.sg/raspbian/raspbian

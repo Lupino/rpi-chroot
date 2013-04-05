@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source rpi-config
+
+qemu-debootstrap --arch armhf wheezy ${ROOT} $MIRROR
