@@ -1,2 +1,7 @@
 export ROOT=${HOME}/project/chroot-raspbian-armhf
 export MIRROR=http://mirror.nus.edu.sg/raspbian/raspbian
+export SCRIPTROOT=`dirname $0`
+
+export RPI_INIT=${SCRIPTROOT}/rpi-init
+export PASSWD=raspberry
+export USER=rpi

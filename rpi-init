@@ -1,0 +1,9 @@
+#!/bin/bash
+
+useradd -m -s /bin/bash -p ${PASSWD} ${USER}
+
+echo "deb ${MIRROR} wheezy main" > /etc/apt/sources.list
+
+wget http://archive.raspbian.org/raspbian.public.key -O - | apt-key add -
+
+apt-get update
