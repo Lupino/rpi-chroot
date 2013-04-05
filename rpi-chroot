@@ -4,7 +4,7 @@ source rpi-config
 
 SCRIPTS=/bin/bash
 
-if test -z $1; then
+if test -n $1; then
     SCRIPTS=$1
 fi
 
