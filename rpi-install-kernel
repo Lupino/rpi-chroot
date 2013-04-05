@@ -1,0 +1,20 @@
+#!/bin/bash
+
+source rpi-config
+
+TMPFILE=/tmp/rpi-firmware.zip
+OUTPUT=/tmp
+
+wget -O ${TMPFILE} https://github.com/raspberrypi/firmware/archive/master.zip
+
+rm -rf ${OUTPUT}/firmware-master
+
+unzip ${TMPFILE} -d ${OUTPUT}
+
+rm -rf ${ROOT}/boot/*
+rm -rf ${ROOT}/lib/modules
+rm -rf ${ROOT}/opt/vc
+cp -a ${OUTPUT}/firmware-master/boot/* ${ROOT}/boot
+cp -a ${OUTPUT}/firmware-master/modules ${ROOT}/lib
+rm -r ${OUTPUT}/firmware-master/hardfp/opt/vc/src/*
+cp -a ${OUTPUT}/firmware-master/hardfp/opt/* ${ROOT}/opt
