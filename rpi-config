@@ -1,4 +1,4 @@
-export ROOT=${HOME}/project/chroot-raspbian-armhf
+export ROOT=${HOME}/chroot-raspbian-armhf
 export MIRROR=http://mirror.nus.edu.sg/raspbian/raspbian
 export SCRIPTROOT=`dirname $0`
 

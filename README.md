@@ -11,8 +11,9 @@
     export MIRROR=http://mirror.nus.edu.sg/raspbian/raspbian
     export SCRIPTROOT=`dirname $0`
 
+    # U6aMy0wojraho is just a blank password
     export RPI_INIT=${SCRIPTROOT}/rpi-init
-    export PASSWD=raspberry
+    export PASSWD=U6aMy0wojraho
     export USER=rpi
 
 ## Build the rootfs
